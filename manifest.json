@@ -1,0 +1,16 @@
+{
+  "name": "Password Generator",
+  "short_name": "PassGen",
+  "theme_color": "#451c6d",
+  "background_color": "#075e54",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": ".",
+  "icons": [
+    {
+      "src": "images/icons/favicon.ico",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}

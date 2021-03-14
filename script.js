@@ -1,3 +1,15 @@
+window.addEventListener('load', async ()=>{
+    if(navigator.serviceWorker){
+        try {
+           const reg = await navigator.serviceWorker.register("service-worker.js")
+            console.log("SW works", reg)
+        }catch (e){
+            console.log("Service worker failed")
+        }
+    }
+})
+
+
 function updateTextInput(val) {
     document.getElementById('textInput').value=val;
 }
