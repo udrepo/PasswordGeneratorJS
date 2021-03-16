@@ -10,13 +10,13 @@ self.addEventListener('install', async event => {
     await cache.addAll(assetUrls)
 })
 
-self.addEventListener('activate', async event => {
-    const cacheNames = await caches.keys()
-    await Promise.all(
-        cacheNames.filter(name=>name !== staticCacheName)
-            .map(name=>caches.delete(name))
-    )
-})
+// self.addEventListener('activate', async event => {
+//     const cacheNames = await caches.keys()
+//     await Promise.all(
+//         cacheNames.filter(name=>name !== staticCacheName)
+//             .map(name=>caches.delete(name))
+//     )
+// })
 
 self.addEventListener('fetch', event => {
     console.log('Fetch', event.request.url)
